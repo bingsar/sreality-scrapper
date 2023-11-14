@@ -1,0 +1,26 @@
+version: "3"
+services:
+  db:
+    image: postgres:9.6
+    environment:
+      POSTGRES_HOST: localhost
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: sreality
+      POSTGRES_PORT: 5432
+    volumes:
+      - ./postgres-data:/var/lib/postgresql/data
+
+  server:
+    image: nicrojump/sreality-server:latest
+    ports:
+      - "3001:3001"
+    depends_on:
+      - db
+
+  client:
+    image: nicrojump/sreality-client:latest
+    ports:
+      - "8080:8080"
+    depends_on:
+      - server
