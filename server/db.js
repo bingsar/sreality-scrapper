@@ -29,6 +29,6 @@ const create_db = async () => {
     await pool.query(create_table_query)
 }
 
-create_db()
+create_db().then(() => console.log('Tables created'));
 
 module.exports = {pool}
