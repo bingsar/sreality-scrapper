@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: var(--color-bg);
+    border-radius: 20px;
+    backdrop-filter: blur(3px) grayscale(50%);
+    box-shadow: 0 8px 22px 0 rgba(0, 0, 0, 0.20);
+    color: var(--color-text);
+}
+
+.counter {
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.loader {
+    width: 20px;
+    height: 20px;
+    border: 5px dotted var(--color-text);
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@media (min-width: 350px) {
+    .header {
+        flex-direction: row;
+        gap: 20px;
+    }
+}

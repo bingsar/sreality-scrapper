@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+:root {
+  --color-bg: #edf4f2;
+  --color-text: #31473A;
+  --color-decor: #7C8363;
+  --color-active: #F2B880;
+}
+
+/* SWIPER */
+
+.propertySwiper {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+.propertySwiper .swiper-slide {
+  width: 100%;
+}
+.propertySwiper .swiper-slide img {
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .propertySwiper .swiper-slide {
+    width: auto;
+  }
+  .propertySwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
