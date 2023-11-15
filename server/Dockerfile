@@ -7,20 +7,14 @@ RUN apt-get update && apt-get install gnupg wget -y && \
     apt-get install google-chrome-stable -y --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
 
-# Set the working directory in the container
 WORKDIR /usr/src/app/server
 
-# Copy package.json and package-lock.json to the working directory
 COPY package*.json ./
 
-# Install app dependencies
 RUN npm install
 
-# Bundle app source
 COPY . .
 
-# Expose the port that the server will run on
 EXPOSE 3001
 
-# Define the command to run your server
 CMD ["npm", "run", "dev"]
