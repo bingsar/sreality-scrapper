@@ -3,6 +3,7 @@ const {pool: pool} = require('./db.js');
 
 async function scrapper() {
     const browser = await puppeteer.launch({
+        executablePath: '/usr/bin/chromium',
         args: [
             '--disable-gpu',
             '--disable-dev-shm-usage',
