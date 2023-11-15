@@ -12,7 +12,7 @@ services:
       - postgres-data:/var/lib/postgresql/data
 
   server:
-    image: nicrojump/dockerhub:sreality-server
+    image: nicrojump/dockerhub:sreality-server-arm
     ports:
       - "3001:3001"
     depends_on:
