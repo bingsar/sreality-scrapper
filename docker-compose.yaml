@@ -27,18 +27,3 @@ services:
 
 volumes:
   postgres-data:
-
-x86_64:
-  services:
-    server:
-      image: sreality-server-x86_64
-
-    client:
-      image: sreality-client-x86_64
-
-arm64:
-  services:
-    server:
-      image: sreality-server-arm64
-    client:
-      image: sreality-client-arm64

@@ -3,7 +3,6 @@ const {pool: pool} = require('./db.js');
 
 async function scrapper() {
     const browser = await puppeteer.launch({
-        // executablePath: '/usr/bin/chromium',
         args: [
             '--disable-gpu',
             '--disable-dev-shm-usage',
@@ -17,10 +16,10 @@ async function scrapper() {
 
     for (let currentPage = startPage; currentPage <= endPage; currentPage++) {
         try {
-            const startUrl = `https://www.sreality.cz/en/search/for-sale/apartments/praha?page=${currentPage}`
+            const url = `https://www.sreality.cz/en/search/for-sale/apartments/praha?page=${currentPage}`
             const page = await browser.newPage()
 
-            await page.goto(startUrl)
+            await page.goto(url)
             await page.waitForSelector('.dir-property-list .property')
 
             const links = await page.evaluate(() => {
