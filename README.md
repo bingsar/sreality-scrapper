@@ -1,7 +1,7 @@
 # sreality-scrapper
 sreality.cz scrapper for titles and images
 
-To start scrapping and run client side run command
+To start scrapping and client side run command
 
 ```
 docker-compose up
