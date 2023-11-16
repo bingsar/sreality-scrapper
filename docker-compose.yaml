@@ -19,7 +19,7 @@ services:
       - db
 
   client:
-    image: nicrojump/dockerhub:sreality-client
+    image: nicrojump/dockerhub:sreality-client-arm
     ports:
       - "8080:8080"
     depends_on:

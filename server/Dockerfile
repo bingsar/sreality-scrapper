@@ -1,4 +1,4 @@
-FROM node:18-slim
+FROM node:16.18-bullseye-slim
 
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 
@@ -9,7 +9,7 @@ RUN apt-get update \
 
 ARG NODE_ENV=production
 ENV NODE_ENV=${NODE_ENV}
-ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+ENV PUPPETEER_EXECUTABLE_PATH=/usr/bin/chromium
 
 WORKDIR /usr/src/app/server
 
